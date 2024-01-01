@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+   font-family: "Open Sans";
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+   width: 10px;
+   height: 7px;
+}
+
+::-webkit-scrollbar-track {
+   background: #cbd5e1;
+}
+
+.ai::-webkit-scrollbar-track {
+   background: none;
+}
+
+::-webkit-scrollbar-thumb {
+   background: #64748b;
+   border-radius: 1000px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background: #788698;
+}
+
+.bubble-right::after,
+.bubble-left::after {
+   content: " ";
+   position: absolute;
+   width: 0;
+   height: 0;
+   top: 0px;
+   bottom: auto;
+   border: 14px solid;
+}
+
+.bubble-right::after {
+   right: -13px;
+   left: auto;
+   border-color: #f59e0b transparent transparent transparent;
+}
+
+.bubble-left::after {
+   left: -12px;
+   right: auto;
+   border-color: #d1d5db transparent transparent transparent;
+}
+
+.notif::after,
+.menu::after {
+   content: " ";
+   position: absolute;
+   width: 0;
+   height: 0;
+   right: 15px;
+   left: auto;
+   transform: scaleY(-1);
+   top: -28px;
+   bottom: auto;
+   border: 15px solid;
+   border-color: #475569 transparent transparent transparent;
+}
